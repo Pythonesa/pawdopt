@@ -1,0 +1,35 @@
+---
+//TODO:
+//import Header
+//import Footer
+
+export interface Props {
+    head: {
+        title: string;
+        description: string;
+    };
+}
+
+const {
+    head: { title, description },
+} = Astro.props as Props;
+---
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{title}</title>
+        <meta name="description" content={description}>
+        <link rel="icon" type="image/png" href="/favicon.png">
+    </head>
+    <body class="bg-background-blue-dark text-text-light font-quattrocento">
+        <!-- <Header /> -->
+        <slot></slot>
+        <!-- <Footer /> -->
+    </body>
+</html>
+
+<style is:global>
+    @import url('https://fonts.googleapis.com/css2?family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap')
+</style>

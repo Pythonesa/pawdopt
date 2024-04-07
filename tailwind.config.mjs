@@ -2,7 +2,11 @@
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-		extend: {},
+		extend: {
+			fontFamily: {
+				quattrocento: ['Quattrocento', 'sans-serif'],
+			},
+		},
 		colors: {
 			'logo-blue': '#a3abe1',
 			'logo-purple': '#db8dec',
@@ -39,6 +43,7 @@ export default {
 				'violet': '#9a899b',
 				'blue': '#546670',
 			},
+			'text-light': '#e7e8f7',
 		},
 	},
 	plugins: [],
