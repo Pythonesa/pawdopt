@@ -1,56 +1,10 @@
 ---
+import Base from "@templates/Base.astro"
+import { AppConfig } from "@utils/AppConfig"
 
+const {title, siteDescription} = AppConfig
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Pawdopt</title>
-	</head>
-	<body>
-		<div class="bg-background-blue-dark">
-			Background: blue dark</div>
-			<div class="bg-background-blue-mid-dark">
-			Background: blue mid dark </br></div>
-			<div class="bg-background-blue-mid">
-			Background: blue mid </br></div>
-			<div class="bg-background-blue-mid-light">
-			Background: blue mid light </br></div>
-			<div class="bg-background-blue-light">
-			Background: blue light </br></div>
-			<div class="bg-background-blue-lighter">
-			Background: blue lighter </br></div>
-			<div>
-				Logo blue: <span class="text-logo-blue">Pawdopt</span>
-				Logo purple: <span class="text-logo-purple">Pawdopt</span>
-				Logo green: <span class="text-logo-green">Pawdopt</span>
-			</div>
-			<div>
-				Accent lighter violet: <span class="text-accent-violet-lighter">Pawdopt</span>
-				Accent light violet: <span class="text-accent-violet-light">Pawdopt</span>
-				Accent mid-light violet: <span class="text-accent-violet-mid-light">Pawdopt</span>
-				Accent mid violet: <span class="text-accent-violet-mid">Pawdopt</span>
-				Accent mid-dark violet: <span class="text-accent-violet-mid-dark">Pawdopt</span>
-				Accent dark violet: <span class="text-accent-violet-dark">Pawdopt</span>
-			</div>
-			<div>
-				Accent lighter green: <span class="text-accent-green-lighter">Pawdopt</span>
-				Accent light green: <span class="text-accent-green-light">Pawdopt</span>
-				Accent mid-light green: <span class="text-accent-green-mid-light">Pawdopt</span>
-				Accent mid green: <span class="text-accent-green-mid">Pawdopt</span>
-				Accent mid-dark green: <span class="text-accent-green-mid-dark">Pawdopt</span>
-				Accent dark green: <span class="text-accent-green-dark">Pawdopt</span>
-			</div>
-			<div>
-				Toast sky blue: <span class="text-toast-sky-blue">Pawdopt</span>
-				Toast green: <span class="text-toast-green">Pawdopt</span>
-				Toast purple: <span class="text-toast-purple">Pawdopt</span>
-				Toast orange: <span class="text-toast-orange">Pawdopt</span>
-				Toast violet: <span class="text-toast-violet">Pawdopt</span>
-				Toast blue: <span class="text-toast-blue">Pawdopt</span>
-			</div>
-	</body>
-</html>
+<Base head={{ title:title, description:siteDescription }}>
+	<h1>{title}</h1>
+</Base>
