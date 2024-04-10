@@ -2,10 +2,14 @@
 import Base from "@templates/Base.astro"
 import { AppConfig } from "@utils/AppConfig"
 import Logo from "@components/header/Logo.astro"
+import NavMenuItem from "@/components/header/navMenu/NavMenuItem.astro"
 
 const {title, siteDescription} = AppConfig
 ---
 
 <Base head={{ title:title, description:siteDescription }}>
 	<Logo logoSrc="/favicon.png" logoAlt="Logo Pawdopt" text="Pawdopt" />
+	<NavMenuItem href="./" text="Home" target="_blank" icon="./favicon.png" altIcon="Patita"/>
+	</br>
+	<NavMenuItem href="./" text="Home" />
 </Base>

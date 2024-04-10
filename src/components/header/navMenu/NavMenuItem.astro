@@ -1,0 +1,15 @@
+---
+const { href, text, icon, altIcon, target = "_self" } = Astro.props
+---
+
+<button class="min-h-10 flex gap-1 items-center rounded-md bg-background-blue-mid-dark px-2 py-1 shadow-md hover:bg-background-blue-mid text-logo-green hover:text-logo-purple" >
+    <a 
+        href={href} 
+        target={target}
+        class="font-bold text-xl flex flex-row gap-1 items-center" 
+    >{icon &&<img 
+        class="w-8 h-8" 
+        src={icon} 
+        alt={altIcon} 
+    />} {text}</a>
+</button>
