@@ -1,10 +1,11 @@
 ---
 import Base from "@templates/Base.astro"
 import { AppConfig } from "@utils/AppConfig"
+import Logo from "@components/header/Logo.astro"
 
 const {title, siteDescription} = AppConfig
 ---
 
 <Base head={{ title:title, description:siteDescription }}>
-	<h1>{title}</h1>
+	<Logo logoSrc="/favicon.png" logoAlt="Logo Pawdopt" text="Pawdopt" />
 </Base>
