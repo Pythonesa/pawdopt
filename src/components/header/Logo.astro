@@ -1,0 +1,9 @@
+---
+import GradientText from "@components/GradientText.astro"
+const {logoSrc, logoAlt, text} = Astro.props
+---
+
+<div class="flex gap-1 items-center text-xl font-bold">
+    <img class="w-16 h-16" src={logoSrc} alt={logoAlt} />
+    <GradientText>{text}</GradientText>
+</div>
