@@ -3,13 +3,15 @@ import Base from "@templates/Base.astro"
 import { AppConfig } from "@utils/AppConfig"
 import Logo from "@components/header/Logo.astro"
 import NavMenuItem from "@/components/header/navMenu/NavMenuItem.astro"
+import NavMenu from "@/components/header/navMenu/NavMenu.astro"
 
 const {title, siteDescription} = AppConfig
 ---
 
 <Base head={{ title:title, description:siteDescription }}>
-	<Logo logoSrc="/favicon.png" logoAlt="Logo Pawdopt" text="Pawdopt" />
-	<NavMenuItem href="./" text="Home" target="_blank" icon="./favicon.png" altIcon="Patita"/>
-	</br>
-	<NavMenuItem href="./" text="Home" />
+	<NavMenu>
+		<NavMenuItem href="./" text="Inicio" icon="./assets/icons/inicio.png" altIcon="Icono de una casa con un perro, un gato y un corazón."/>
+		<NavMenuItem href="./" text="Aplicación" icon="./favicon.png" altIcon="Icono con una pata en un círculo con un corazón."/>
+		<NavMenuItem href="./" text="Documentación"/>
+	</NavMenu>
 </Base>
