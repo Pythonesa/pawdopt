@@ -1,0 +1,13 @@
+---
+const { href, text, bgColor, txtColor, hBgColor, hTxtColor, target = "_self" } = Astro.props
+---
+
+<button
+    class=`min-h-10 transition-all flex gap-1 items-center rounded-md ${bgColor} px-2 py-1 shadow-md ${txtColor} ${hBgColor} ${hTxtColor}`
+>
+    <a
+        href={href}
+        target={target}
+        class="font-bold text-xl flex flex-row gap-1 items-center"
+    >{text}</a>
+</button>
